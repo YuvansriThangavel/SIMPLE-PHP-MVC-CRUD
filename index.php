@@ -33,6 +33,7 @@ class MainController{
         }
     }
 }
+echo "Yuvansri";
 $mainController = new MainController($_SERVER['QUERY_STRING']);
 $mainController->render();
 
