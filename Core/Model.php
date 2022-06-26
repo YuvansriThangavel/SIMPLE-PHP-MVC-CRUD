@@ -1,5 +1,5 @@
 <?php
-
+namespace Core;
 class Model{
 
     public static function render($class, $method, $args = []){

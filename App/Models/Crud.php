@@ -9,8 +9,8 @@ class Crud{
 
     public function __construct(){
         require_once('./common/DbCon.php');
-        $db = new \Common\DbCon;
-        $this->conn = $db->getConnection();
+        $db = new \App\Database\Connection;
+        $this->connection = $db->getConnection();
     }
     public function insert($data){
         

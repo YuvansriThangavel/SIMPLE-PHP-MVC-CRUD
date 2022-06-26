@@ -1,7 +1,7 @@
 <?php
 
-require_once('./common/View.php');
-require_once('./common/Model.php');
+require_once('./Core/View.php');
+require_once('./Core/Model.php');
 class Crud{
     
     public function home(){

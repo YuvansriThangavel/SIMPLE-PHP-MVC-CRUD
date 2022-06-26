@@ -9,6 +9,8 @@ class MainController{
        
         $query = explode('/', $url);
 
+        //Basic Url routing
+
         if(isset($query[2])){
             $this->controller = $query[0];
             $this->action = $query[1];
@@ -23,7 +25,7 @@ class MainController{
     }
 
     public function render(){
-        require_once(__DIR__.'/App/Controllers/'.$this->controller.'.php');
+        require_once(dirname(__DIR__).'/App/Controllers/'.$this->controller.'.php');
         $con = new $this->controller;
 
         if(isset($this->param)){
@@ -38,16 +40,3 @@ $mainController = new MainController($_SERVER['QUERY_STRING']);
 $mainController->render();
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-</html>
