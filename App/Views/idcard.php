@@ -6,6 +6,7 @@
             <!-- second id card  -->
             <div class='container' style='text-align:left; border:2px dotted black;'>
                 <div class='header'>
+                <img src='http://localhost/PHP-oop-crud-master/public/images/tech.png' alt=''>
                 </div>
                 <div class='container-2'>
                     <div class='box-1'>
