@@ -5,10 +5,9 @@ namespace App\Models;
 
 
 class Crud{
-    private $conn;
+    private $connection;
 
     public function __construct(){
-        require_once('../App/Database/Connection.php');
         $db = new \App\Database\Connection;
         $this->connection = $db->getConnection();
     }
@@ -37,7 +36,7 @@ class Crud{
     public function update($data){
         $query = "UPDATE records SET name='$data[name]', id_no='$data[id_no]', role='$data[role]',email='$data[email]', mobile='$data[mobile]', address='$data[address]', dob='$data[dob]',image='$data[image]'WHERE id='$data[id] '";
 
-		if ($sql = $this->conn->query($query)) {
+		if ($sql = $this->connection->query($query)) {
 			return true;
 		}else{
 			return false;
@@ -47,7 +46,7 @@ class Crud{
     public function delete($id){
 
         $query = "DELETE FROM records where id = '$id'";
-		if ($this->conn->query($query)) {
+		if ($this->connection->query($query)) {
 			return true;
 		}else{
 			return false;
@@ -57,7 +56,7 @@ class Crud{
     public function read($args){
         $id = $args['id'];
         $query = "SELECT * FROM records WHERE id_number=?";
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->connection->prepare($query);
         $stmt->bindParam(1, $id);;
         if($stmt->execute()){
             $result = $stmt->fetchAll();
@@ -72,7 +71,7 @@ class Crud{
 
         $query = "SELECT * FROM records";
 
-        $result = $this->conn->query($query);
+        $result = $this->connection->query($query);
 
         $records = $result->fetchAll();
 

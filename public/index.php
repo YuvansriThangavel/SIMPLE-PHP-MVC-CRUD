@@ -27,7 +27,6 @@ class MainController{
     }
 
     public function render(){
-        //require_once(dirname(__DIR__).'/App/Controllers/'.$this->controller.'.php');
         $this->controller = "App\\Controllers\\".$this->controller;
         $con = new $this->controller;
 

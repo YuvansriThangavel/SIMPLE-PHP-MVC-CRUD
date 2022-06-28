@@ -2,7 +2,7 @@
 include('header.php');
 ?>
 
-<link rel="stylesheet" href="http://localhost/PHP-oop-crud-master/supportFiles/css/style.css">
+<link rel="stylesheet" href="http://localhost/PHP-oop-crud-master/public/supportFiles/css/style.css">
 
 
 <br>
