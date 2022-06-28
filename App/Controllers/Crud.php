@@ -1,7 +1,10 @@
 <?php
+namespace App\Controllers;
+require_once('../Core/Model.php');
+require_once('../Core/View.php');
 
-require_once('./Core/Model.php');
-require_once('./Core/View.php');
+use Core\Model;
+use Core\View;
 
 class Crud{
     

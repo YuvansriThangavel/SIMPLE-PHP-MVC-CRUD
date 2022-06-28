@@ -8,7 +8,7 @@ class Crud{
     private $conn;
 
     public function __construct(){
-        require_once('./common/DbCon.php');
+        require_once('../App/Database/Connection.php');
         $db = new \App\Database\Connection;
         $this->connection = $db->getConnection();
     }

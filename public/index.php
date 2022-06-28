@@ -1,6 +1,6 @@
 <?php
-define('VIEW_PATH', __DIR__.'\\App\\Views');
-define('MODEL_PATH', __DIR__.'\\App\\Models');
+define('VIEW_PATH', dirname(__DIR__).'\\App\\Views');
+define('MODEL_PATH', dirname(__DIR__).'\\App\\Models');
 class MainController{
     private $controller;
     private $action;
@@ -26,6 +26,7 @@ class MainController{
 
     public function render(){
         require_once(dirname(__DIR__).'/App/Controllers/'.$this->controller.'.php');
+        $this->controller = "App\\Controllers\\".$this->controller;
         $con = new $this->controller;
 
         if(isset($this->param)){
