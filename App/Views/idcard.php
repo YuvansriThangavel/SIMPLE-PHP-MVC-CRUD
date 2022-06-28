@@ -18,7 +18,7 @@
                         <h2><?= $args[0]['role'] ?></h2>
                     </div>
                     <div class='box-3'>
-                        <img src='images/logo.png' alt=''>
+                        <img src='http://localhost/PHP-oop-crud-master/public/images/logo.png' alt=''>
                     </div>
                 </div>
 
