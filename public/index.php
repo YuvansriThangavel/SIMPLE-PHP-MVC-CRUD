@@ -1,6 +1,8 @@
 <?php
 define('VIEW_PATH', dirname(__DIR__).'\\App\\Views');
 define('MODEL_PATH', dirname(__DIR__).'\\App\\Models');
+
+require('../Core/autoload.php');
 class MainController{
     private $controller;
     private $action;
@@ -25,7 +27,7 @@ class MainController{
     }
 
     public function render(){
-        require_once(dirname(__DIR__).'/App/Controllers/'.$this->controller.'.php');
+        //require_once(dirname(__DIR__).'/App/Controllers/'.$this->controller.'.php');
         $this->controller = "App\\Controllers\\".$this->controller;
         $con = new $this->controller;
 
