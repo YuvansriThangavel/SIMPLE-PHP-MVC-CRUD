@@ -5,7 +5,7 @@ include('header.php');
   <div class="row">
     <div class="col-md-12 mt-5">
       <h1 class="text-center">ID CARD GENERATOR</h1>
-      <a href="insert.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"> insert</a>
+      <a href="?Crud/insert" class="btn btn-primary"> insert</a>
       <a href="?Crud/generateIdCard" class="btn btn-primary"><i class="fa fa-address-card"></i> Generate ID
         Card</a>
       <hr style="height: 1px;color: black;background-color: black;">
@@ -33,9 +33,9 @@ include('header.php');
               <td><?= $record['name']; ?></td>
               <td><?=$record['role']; ?></td>
               <td>
-                <a href="?Crud/read/<?= $record['id']; ?>" class="badge badge-info">Read</a>
-                <a href="?Crud/delete/<?= $record['id']; ?>" class="badge badge-danger">Delete</a>
-                <a href="?Crud/edit/<?= $record['id']; ?>" class="badge badge-success">Edit</a>
+                <a href="Crud/read/<?= $record['id_number']; ?>" class="badge badge-info">Read</a>
+                <a href="Crud/delete/<?= $record['id_number']; ?>" class="badge badge-danger">Delete</a>
+                <a href="Crud/update/<?= $record['id_number']; ?>" class="badge badge-success">Edit</a>
               </td>
             </tr>
           <?php

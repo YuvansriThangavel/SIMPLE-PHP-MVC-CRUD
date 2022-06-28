@@ -10,7 +10,7 @@ include('header.php');
   </div>
   <div class="row">
     <div class="col-md-5 mx-auto">
-      <form action="http://localhost/PHP-oop-crud-master/index.php?Crud/insert" method="post" enctype="multipart/form-data">
+      <form action="Crud/insert" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label for="">Name</label>
           <input type="text" name="name" class="form-control">

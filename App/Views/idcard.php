@@ -9,8 +9,10 @@
                 <img src='http://localhost/PHP-oop-crud-master/public/images/tech.png' alt=''>
                 </div>
                 <div class='container-2'>
+
                     <div class='box-1'>
-                        <h2><?= $args[0]['image'] ?></h2>
+                        <!--<h2><?= $args[0]['image'] ?></h2> -->
+                        <h2><img src='http://localhost/PHP-oop-crud-master/public/images/user.png' alt=''>
                     </div>
                     <div class='box-2'>
                         <h2><?= $args[0]['name'] ?></h2>

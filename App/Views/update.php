@@ -10,43 +10,39 @@ include('header.php');
       </div>
       <div class="row">
         <div class="col-md-5 mx-auto">
-          <form action="?Crud/update/<?=$args['id']?>" method="post">
+          <?php print_r($args); ?>
+          <form action="Crud/update/<?=$args[0]['id_number']?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="">Name</label>
-              <input type="text" name="name" value="<?=$args['name']; ?>" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label for="">ID Number</label>
-              <input type="text" name="id_no" value="<?=$args['id_number']; ?>" class="form-control">
+              <input type="text" name="name" value="<?=$args[0]['name']; ?>" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Role|Destination</label>
-              <input type="text" name="role" value="<?=$args['role']; ?>" class="form-control">
+              <input type="text" name="role" value="<?=$args[0]['role']; ?>" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Email</label>
-              <input type="email" name="email" value="<?=$args['email']; ?>" class="form-control">
+              <input type="email" name="email" value="<?=$args[0]['email']; ?>" class="form-control">
             </div>
             <div class="form-group">
               <label for="">Mobile No.</label>
-              <input type="text" name="mobile" value="<?=$args['mobile']; ?>" class="form-control">
+              <input type="text" name="mobile" value="<?=$args[0]['mobile']; ?>" class="form-control">
             </div>
             <div class="form-group">
               <label for="">Address</label>
-              <textarea name="address" id="" cols="" rows="3" class="form-control"><?=$args['address']; ?></textarea>
+              <textarea name="address" id="" cols="" rows="3" class="form-control"><?=$args[0]['address']; ?></textarea>
             </div>
 
             <div class="form-group">
               <label for="inputZip">Date of Birth </label>
-              <input type="date" name="dob" value="<?=$args['dob']; ?>" class="form-control">
+              <input type="date" name="dob" value="<?=$args[0]['dob']; ?>" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="photo">Image</label>
-              <input type="file" name="image" value="<?=$args['image']; ?>" class="form-control">
+              <input type="file" name="image" value="<?=$args[0]['image']; ?>" class="form-control">
             </div>
             <div class="form-group">
               <button type="submit" name="update" class="btn btn-primary">Submit</button>

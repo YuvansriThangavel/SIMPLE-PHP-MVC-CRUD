@@ -15,7 +15,7 @@ class Crud{
         
         $query = "INSERT INTO records (name,id_number,role,email,mobile,address,dob,image) VALUES (?,?,?,?,?,?,?,?)";
 
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->connection->prepare($query);
         $stmt->bindParam(1, $data['name']);
         $stmt->bindParam(2,$data['id_no']);
         $stmt->bindParam(3,$data['role']);
@@ -34,7 +34,7 @@ class Crud{
     }
 
     public function update($data){
-        $query = "UPDATE records SET name='$data[name]', id_no='$data[id_no]', role='$data[role]',email='$data[email]', mobile='$data[mobile]', address='$data[address]', dob='$data[dob]',image='$data[image]'WHERE id='$data[id] '";
+        $query = "UPDATE records SET name='$data[name]', role='$data[role]',email='$data[email]', mobile='$data[mobile]', address='$data[address]', dob='$data[dob]',image='$data[image]'WHERE id_number='$data[id_number] '";
 
 		if ($sql = $this->connection->query($query)) {
 			return true;
@@ -45,7 +45,7 @@ class Crud{
 
     public function delete($id){
 
-        $query = "DELETE FROM records where id = '$id'";
+        $query = "DELETE FROM records where id_number = '$id'";
 		if ($this->connection->query($query)) {
 			return true;
 		}else{
@@ -54,7 +54,7 @@ class Crud{
     }   
 
     public function read($args){
-        $id = $args['id'];
+        $id = $args['id_number'];
         $query = "SELECT * FROM records WHERE id_number=?";
         $stmt = $this->connection->prepare($query);
         $stmt->bindParam(1, $id);;

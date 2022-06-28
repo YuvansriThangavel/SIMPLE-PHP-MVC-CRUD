@@ -7,9 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="?Crud/home"> <b>Home <span class="sr-only">(current)</span></a>
-            <li><a class="nav-link" href="?Crud/readAll"> <b>View <span class="sr-only">(current)</span></a>
-            <li><a class="nav-link" href="?Crud/generateIdCard"> <b>GenerateId <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="Crud/home"> <b>Home <span class="sr-only">(current)</span></a>
+            <li><a class="nav-link" href="Crud/readAll"> <b>View <span class="sr-only">(current)</span></a>
+            <li><a class="nav-link" href="Crud/generateIdCard"> <b>GenerateId <span class="sr-only">(current)</span></a>
         </ul>   
     </div>
 </nav>

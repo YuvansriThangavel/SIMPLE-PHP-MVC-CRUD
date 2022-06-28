@@ -3,7 +3,6 @@ namespace Core;
 class Model{
     
     public static function render($class, $method, $args = []){
-        echo __DIR__;
         $return = '';
         $file = MODEL_PATH.'\\'.$class.'.php';
         if(file_exists($file)){
